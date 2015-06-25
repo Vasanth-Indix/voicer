@@ -1,0 +1,52 @@
+{
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDescription__",
+    "version": "2",
+    "manifest_version": 2,
+    "default_locale": "en",
+    "commands": {
+      "toggle-feature-foo": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y",
+          "mac": "Command+Shift+5"
+        },
+        "description": "Toggle feature foo",
+        "global": true
+      }
+    },
+    "permissions": [
+        "alarms",
+        "app.window",
+        "audioCapture",
+        "activeTab",
+        "background",
+        "browser",
+        "clipboardRead",
+        "clipboardWrite",
+        "contextMenus",
+        "desktopCapture",
+        "fullscreen",
+        "identity",
+        "notifications",
+        "power",
+        "storage",
+        "videoCapture",
+        "webview",
+        "<all_urls>",
+        "http://*/*",
+        "https://*/*",
+        "http://127.0.0.1/*"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/main.js",
+                "scripts/chromereload.js"
+            ]
+        }
+    }
+}
